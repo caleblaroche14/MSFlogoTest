@@ -1,0 +1,128 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.mainLogo{
+    position: relative;
+    height: 400px;
+    width: 400px;
+    cursor: pointer;
+}
+
+.logoWordsFlex{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: rotate(-5deg);
+    top: 110px;
+    left: 50px;
+    transition: .2s;
+}
+
+
+.mainLogoText{
+    position: relative;
+    color: rgb(255, 95, 202);
+    font-size: 4rem;
+    font-family: 'Anton';
+    margin-top: -25px;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 5px rgb(255, 95, 202);
+    transition: 3s;
+}
+
+#mainLogo1{
+    position: relative;
+}
+#mainLogo2{
+    position: relative;
+    margin-left: 40px;
+}
+#mainLogo3{
+    position: relative;
+    margin-left: 80px;
+}
+
+.back{
+    position: relative;
+}
+
+.triangle{
+    transition: 3s;
+    position: relative;
+    width: 100px;
+    fill: transparent;
+    stroke: rgb(255, 230, 0);
+    stroke-width: 8;
+    -webkit-filter: drop-shadow( 0px 0px 10px rgb(255, 230, 0, 0.7));
+    filter: drop-shadow( 0px 0px 10px rgba(255, 230, 0, 0.7));
+}
+
+.triangle-container{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .2s;
+    animation: rotateTri 30s linear infinite;
+}
+
+svg{
+    pointer-events: none;
+
+}
+
+@keyframes rotateTri {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+#introP{
+    position: relative;
+    color: rgb(255, 95, 202);
+    font-size: 1rem;
+    font-family: 'Calibri';
+    letter-spacing: 5px;
+    text-shadow: 0px 0px 1px rgb(255, 95, 202);
+    margin-top: 40px;
+    pointer-events: none;
+    animation: letterSpace 3s linear infinite;
+    opacity: 1;
+    transition: 3s;
+    text-align: center;
+}
+
+@keyframes letterSpace {
+    0%{letter-spacing: 5px;}
+    50%{letter-spacing: 5.2px;}
+    100%{letter-spacing: 5px;}
+}
+
+#particles{
+    position: absolute;
+    pointer-events: none;
+    opacity: .2;
+    animation: inandout 3s linear infinite;
+}
+
+@keyframes inandout {
+    0%{opacity: .2;}
+    50%{opacity: 0;}
+    100%{opacity: .2;}
+}
